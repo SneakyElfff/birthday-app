@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* src/App.css */
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgba(205, 75, 89, 0.6);
+  font-family: "Comic Sans MS", sans-serif;
+  text-align: center;
+}
+
+.hello-message h1 {
+  color: #edede9;
+  font-size: 70px;
+  margin: 0 0 20px 0;
+}
+
+.celebrate-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-family: "Comic Sans MS", sans-serif;
+  background-color: #cd4b59;
   color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.celebrate-button:hover {
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
+.celebration-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cake {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #cd4b59; /* Frame around the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  animation: fadeIn 1s ease-in;
+  max-width: 90%; /* Ensures it fits on mobile */
+}
+
+.card h2 {
+  color: #cd4b59;
+  margin: 0 0 10px 0;
+}
+
+.card p {
+  color: #333;
+  margin: 0;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+
+  .celebrate-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .cake {
+    max-height: 150px;
   }
 }
