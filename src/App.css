@@ -67,6 +67,8 @@
 .card p {
   color: #333;
   margin: 0;
+  text-align: justify;
+  text-indent: 35px;
 }
 
 @keyframes fadeIn {
